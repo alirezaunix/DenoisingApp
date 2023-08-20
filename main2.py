@@ -57,7 +57,7 @@ factor = 7
 # Streamlit web app UI
 def main():
     # Load the logo image
-    logo_image = Image.open('D:\CTdinoiseing\download.jpg')
+    logo_image = Image.open('download.jpg')
 
     # Display the logo image
     st.image(logo_image, caption='QMISG')
@@ -75,7 +75,7 @@ def main():
         img = load_dicom_image(uploaded_file)
 
         # Load and preprocess model
-        weight_file = "D:\CTdinoiseing\center_weights.011-50.997-29.16076_dncnn_CD_fantom.hdf5"
+        weight_file = "center_weights.011-50.997-29.16076_dncnn_CD_fantom.hdf5"
         input_channel_num = 1
         model = get_model(input_channel_num=input_channel_num, model_name="dncnn")
         model.load_weights(weight_file)
